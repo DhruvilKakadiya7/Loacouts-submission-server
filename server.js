@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.json());
 app.use('/', submitRouter);
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Connect DataBase
 const DATABASE_URL = process.env.DATABASE_LINK;
