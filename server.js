@@ -44,6 +44,7 @@ while (mongoose.connection.readyState != 1) {
     await sleep(1000);
 }
 app.get('/', (req, res)=>{
+    console.log('xxx');
     res.send('Submission server');
 })
 const server = app.listen(PORT, () => {
