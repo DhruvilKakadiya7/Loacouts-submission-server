@@ -47,6 +47,6 @@ app.get('/', (req, res)=>{
     console.log('xxx');
     res.send('Submission server');
 })
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server is started on port ${PORT}.`);
 });
