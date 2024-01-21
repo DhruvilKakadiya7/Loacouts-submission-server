@@ -3,8 +3,9 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import submitRouter from './routes/submitRouter.js';
+import dotenv from 'dotenv'
 const app = express();
-
+dotenv.config();
 // Allow all origins
 const allowedOrigins = '*';
 
@@ -26,7 +27,7 @@ app.use('/', submitRouter);
 const PORT = 8000;
 
 // Connect DataBase
-const DATABASE_URL = process.env.DATABASE_URL;
+const DATABASE_URL = process.env.DATABASE_LINK;
 mongoose.connect(DATABASE_URL);
 const db = mongoose.connection;
 db.on('error', (err) => console.log("Database err " + err));
