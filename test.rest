@@ -1,0 +1,21 @@
+POST http://localhost:8000/submitProblem
+Content-Type: application/json
+
+{
+  "duelId": "6576c53869c0c13a70f7c4dc",
+  "problemId": "A",
+  "contestId": "1",
+  "problemIndex": "A",
+  "codeContent": "print('submission from 2nd server')print('xxx')",
+  "languageCode": 73,
+  "playerUid": "hfisodnlaoiefndkmsl"
+}
+
+###
+
+GET http://localhost:8000/getSubmissionData/65a24b378eb94c3b6f39e897
+
+###
+
+GET http://localhost:8000/getDuelSubmissions/65a92b50e66e7dbe69153bea
+
