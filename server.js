@@ -43,7 +43,9 @@ export const sleep = (ms) => {
 while (mongoose.connection.readyState != 1) {
     await sleep(1000);
 }
-
+app.get('/', (req, res)=>{
+    res.send('Submission server');
+})
 const server = app.listen(PORT, () => {
     console.log(`Server is started on port ${PORT}.`);
 });
